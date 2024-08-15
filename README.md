@@ -1,7 +1,4 @@
 # jobtracker
-
-Certainly! Here's the updated README file with the additional sentence to install all the requirements:
-
 Django Job Tracker
 Overview
 Django Job Tracker is a comprehensive web application designed to help users manage and track their job applications. The app allows users to register, log in, and keep track of their job applications with ease. It features user authentication, job application CRUD operations, file uploads, and an intuitive user interface built with Bootstrap.
