@@ -7,6 +7,7 @@ Django Job Tracker Overview Django Job Tracker is a comprehensive web applicatio
 **Search Functionality:** Search for job applications by title. Email Notifications: Send a welcome email upon user registration. Dashboard: View job application status counts. 
 
 **Customizable Admin Interface:** Customized Django admin interface to manage companies and jobs. 
+
 **Technologies Used Backend:**
 
 Django 5.0.7 Database: MySQL Frontend: HTML, CSS, Bootstrap Installation Prerequisites Python 3.x MySQL Git
