@@ -1,0 +1,37 @@
+{% extends 'jobs/base.html' %}
+
+{% block title %}Search Results{% endblock %}
+
+{% block content %}
+    <div class="container mt-4">
+        <h1 class="page-title" style="color: black;">Search Results</h1>
+
+        <!-- Search Form -->
+        <form method="get" action="{% url 'search_jobs' %}" class="mb-4">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Search jobs..." value="{{ query }}">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+        </form>
+
+        {% if jobs %}
+            <div class="row">
+                {% for job in jobs %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: black;">{{ job.title }}</h5>
+                            <p class="card-text">{{ job.description|slice:":100" }}...</p>
+                            <a href="{% url 'job_detail' pk=job.pk %}" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No jobs found matching your search criteria.</p>
+        {% endif %}
+    </div>
+{% endblock %}

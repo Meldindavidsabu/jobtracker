@@ -1,0 +1,19 @@
+<!-- templates/jobs/job_detail.html -->
+{% extends 'jobs/base.html' %}
+
+{% block title %}{{ job.title }}{% endblock %}
+
+{% block content %}
+    <div class="container mt-4">
+        <h1 class="page-title" style="color: black;">{{ job.title }}</h1>
+        <div class="card">
+            <div class="card-body">
+                <p>{{ job.description }}</p>
+                <p><strong>Company:</strong> {{ job.company.name }}</p>
+                <p><strong>Application Date:</strong> {{ job.application_date }}</p>
+                <p><strong>Status:</strong> {{ job.status }}</p>
+                <a href="{% url 'job_list' %}" class="btn btn-secondary mt-3">Back to Job List</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

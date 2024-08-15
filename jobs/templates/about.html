@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        .about-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .about-header h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        .about-description {
+            font-size: 1.2em;
+            color: #555;
+            margin: 20px 0;
+        }
+        .about-description p {
+            margin-bottom: 15px;
+        }
+        .about-team {
+            font-size: 1em;
+            color: #777;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4 about-container">
+        <div class="about-header">
+            <h1>About Us</h1>
+        </div>
+        <div class="about-description">
+            <p>Welcome to <strong>Your Job Tracker</strong> - 
+JobTracker is a simple yet powerful tool designed to help job seekers manage their job applications with ease. Our platform provides a user-friendly interface to track and organize job applications, making it easier to stay on top of multiple applications and deadlines.
+How it Works
+
+JobTracker allows users to:
+
+- Create and manage job applications in one place
+- Track application deadlines and follow-ups
+- Store and organize resumes, cover letters, and other application materials
+- Easily search and filter job applications
+
+Get Started Today!
+
+Sign up for JobTracker today and start managing your job applications with ease. We're excited to help you achieve your career goals!
+
+        </div>
+        <div class="about-team">
+            <p>Crafted with 💖 by Meldin</p>
+        </div>
+    </div>
+    
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

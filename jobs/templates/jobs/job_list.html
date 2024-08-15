@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Job List{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Job List</h1>
+    <div class="mb-3">
+        {% if user.is_authenticated %}
+            <a href="{% url 'job_create' %}" class="btn btn-primary">Add New Job</a>
+        {% endif %}
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Company</th>
+                <th>Application Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for job in jobs %}
+            <tr>
+                <td><a href="{% url 'job_detail' job.pk %}">{{ job.title }}</a></td>
+                <td>{{ job.company.name }}</td>
+                <td>{{ job.application_date }}</td>
+                <td>{{ job.status }}</td>
+                <td>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'job_update' job.pk %}" class="btn btn-secondary btn-sm">Edit</a>
+                        <a href="{% url 'job_delete' job.pk %}" class="btn btn-danger btn-sm">Delete</a>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

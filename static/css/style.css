@@ -1,0 +1,78 @@
+/* Title Styling */
+h1 {
+    color:greenyellow; /* General white color for the title */
+    font-size: 3rem; /* Large font size */
+    text-align: center; /* Center-align the title */
+    margin-top: 20px; /* Add some space above the title */
+    font-family: 'Arial', sans-serif; /* Choose a font family */
+}
+
+body {
+    background-color: #0baa72; /* Light purple background color */
+}
+
+.navbar {
+    margin-bottom: 20px; /* Space below the navbar */
+    background-color: greenyellow; /* Dark background color for the navbar */
+    color: #f8f9fa; /* Light color for text in the navbar */
+}
+
+.navbar-brand {
+    color: #ffeb3b; /* Yellow color for the brand name */
+    font-family: 'Arial', sans-serif; /* Font family for the brand name */
+    font-size: 1.5rem; /* Font size for the brand name */
+}
+
+.navbar-nav .nav-link {
+    color: #f8f9fa; /* Color of the navigation links */
+    font-family: 'Arial', sans-serif; /* Font family for navigation links */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffeb3b; /* Color of the navigation links on hover */
+}
+
+.btn-primary {
+    background-color: #1c91a3; /* Blue background color */
+    border-color: #007bff; /* Blue border color */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue background color on hover */
+    border-color: #004085; /* Darker blue border color on hover */
+}
+
+.btn-secondary {
+    background-color: #fafafa; /* Light background color */
+    border-color: #ffe9e3; /* Light pink border color */
+}
+
+.carousel-inner img {
+    width: 100%;  /* Adjust width to full container width */
+    height: 314px;  /* Set a specific height for the images */
+    object-fit: cover;  /* Make sure the image covers the area without distortion */
+}
+
+/* Card styling */
+.card {
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for card */
+    margin-bottom: 20px;
+}
+
+.card-body {
+    padding: 1.25rem; /* Padding inside the card */
+}
+
+.card-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Specific styling for the job detail title */
+.page-title {
+    color: #333; /* Black color specifically for job titles */
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}

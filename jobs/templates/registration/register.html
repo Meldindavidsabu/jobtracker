@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f2f9f1;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .navbar-custom {
+            background-color: #e0ffcd;
+        }
+        .navbar-brand h5 {
+            font-family: 'Poppins', sans-serif;
+            color: #333 !important;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .register-container {
+            max-width: 500px;
+            width: 100%;
+            margin: 50px auto; /* Centering the container */
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .register-header {
+            margin-bottom: 30px;
+        }
+        .register-header h1 {
+            font-size: 2em;
+            color: #333;
+        }
+        .btn-custom {
+            background-color: #ffcab0;
+            border-color: #ffcab0;
+            color: #333;
+        }
+        .btn-custom:hover {
+            background-color: #ffb396;
+            border-color: #ffb396;
+        }
+        .footer {
+            background-color: #e0ffcd;
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+            position: relative; /* Ensure footer is below content */
+        }
+        .footer a {
+            color: #333;
+        }
+        .form-text {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                <h5 class="pt-1">Your Job Tracker</h5>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+    <div class="register-container">
+        <div class="register-header">
+            <h1>Register</h1>
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.username.label_tag }}
+                {{ form.username }}
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        document.getElementById("id_username").classList.add("form-control");
+                    });
+                </script>
+            </div>
+            <div class="form-group">
+                {{ form.email.label_tag }}
+                {{ form.email }}
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        document.getElementById("id_email").classList.add("form-control");
+                    });
+                </script>
+            </div>
+            <div class="form-group">
+                {{ form.password1.label_tag }}
+                {{ form.password1 }}
+                <small id="password-message" class="form-text"></small>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        document.getElementById("id_password1").classList.add("form-control");
+                    });
+                </script>
+            </div>
+            <div class="form-group">
+                {{ form.password2.label_tag }}
+                {{ form.password2 }}
+                <small class="form-text text-muted">
+                    Enter the same password as above, for verification.
+                </small>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        document.getElementById("id_password2").classList.add("form-control");
+                    });
+                </script>
+            </div>
+            <button type="submit" class="btn btn-custom btn-block">Register</button>
+        </form>
+        <div class="text-center mt-3">
+            <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="text-center p-3">
+        © 2024 <a href="{% url 'about' %}">Your Job Tracker -</a>
+        Made with 💖 by Meldin
+    </div>
+</footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>

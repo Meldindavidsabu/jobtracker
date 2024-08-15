@@ -1,0 +1,15 @@
+
+
+{
+    "builds": [{
+        "src": "jobtracker/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "1000mb", "runtime": "python3.9" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "jobtracker/wsgi.py"
+        }
+    ]
+}

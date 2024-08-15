@@ -1,0 +1,19 @@
+/* custom_admin.css */
+body {
+    background-color: #f0f0f5; /* Example background color */
+    color: #333; /* Text color */
+}
+
+.model-company .column-name,
+.model-job .column-title {
+    color: #007bff; /* Example color for table column headers */
+}
+
+#header, #header .branding h1 a {
+    background-color: #343a40; /* Header background color */
+    color: #ffffff; /* Header text color */
+}
+
+a {
+    color: #007bff; /* Link color */
+}
